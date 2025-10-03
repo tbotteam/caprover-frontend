@@ -68,10 +68,7 @@ export default class Login extends ApiComponent<RouteComponentProps<any>, any> {
             <Layout className="full-screen">
                 <Row justify="center" align="middle" className="full-screen">
                     <Card
-                        title={localize(
-                            'login_form.cap_rover',
-                            'CapRover Login'
-                        )}
+                        title={'unCoded Server Panel Login'}
                         style={{ width: 450 }}
                         extra={
                             isLanguageEnabled ? (

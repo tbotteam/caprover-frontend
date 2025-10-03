@@ -1,15 +1,10 @@
-import {
-    FlagTwoTone,
-    InfoCircleOutlined,
-    SafetyCertificateTwoTone,
-} from '@ant-design/icons'
-import { Card, Empty, Input, Row, Tooltip } from 'antd'
+import { FlagTwoTone, SafetyCertificateTwoTone } from '@ant-design/icons'
+import { Card, Input, Row, Tooltip } from 'antd'
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { IHashMapGeneric } from '../../../../models/IHashMapGeneric'
 import { IOneClickAppIdentifier } from '../../../../models/IOneClickAppModels'
 import StringSimilarity from '../../../../utils/StringSimilarity'
-import NewTabLink from '../../../global/NewTabLink'
 
 export default class OneClickGrid extends Component<
     {
@@ -170,21 +165,8 @@ export default class OneClickGrid extends Component<
                         justifyContent: 'center',
                     }}
                 >
-                    {apps.length ? (
-                        apps.length &&
-                        apps.map((app) => self.createOneClickApp(app))
-                    ) : (
-                        <div>
-                            <Empty description="No matching App" />
-                            <div style={{ paddingTop: 30 }}>
-                                What if the app/database I want is not listed
-                                here? &nbsp;
-                                <NewTabLink url="https://caprover.com/docs/one-click-apps.html#what-about-other-apps">
-                                    <InfoCircleOutlined />
-                                </NewTabLink>
-                            </div>
-                        </div>
-                    )}
+                    {apps.length &&
+                        apps.map((app) => self.createOneClickApp(app))}
                 </div>
             </Fragment>
         )
